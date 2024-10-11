@@ -43,7 +43,6 @@ view: companies {
     sql: ${TABLE}.IsRepresenatedByColliers ;;
   }
   dimension: name {
-    view_label: "Client Name"
     type: string
     sql: ${TABLE}.Name ;;
   }

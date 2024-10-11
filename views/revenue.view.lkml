@@ -71,4 +71,9 @@ view: revenue {
     type: count
     drill_fields: [brokers.broker_id, brokers.first_name, brokers.last_name, departments.short_name, departments.department_id]
   }
+
+  measure: tot_revenue {
+    type: sum
+    sql: ${revenue_contribution} ;;
+  }
 }
