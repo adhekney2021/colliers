@@ -143,4 +143,22 @@ view: lease_header {
     sql: ${total_value} ;;
     value_format_name: usd_0
   }
+
+  dimension: lease_rate_per_square_ft {
+    type: number
+    value_format_name: usd
+    sql: ${total_value}/${area} ;;
+  }
+
+  measure: average_lease_rate_per_sqft {
+    type: average
+    value_format_name: usd
+    sql: ${total_value}/${area} ;;
+    drill_fields: [detail*]
+  }
+
+  set: detail {
+    fields: [deal_lease_id,deal_id, deal_property_id,commission,executed_renewal_option,executed_termination_option,area,total_value, lease_period_starts_date,lease_period_ends_date, lease_escalation_type, lease_expiry_date, lease_rate_type, lease_type]
+  }
+
 }
