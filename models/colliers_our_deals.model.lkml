@@ -43,6 +43,7 @@ explore: deal_header {}
 explore: installments_and_invoices {}
 
 explore: lease_header {
+  label: "Start Lease related queries here"
   join: deal_header {
     type: left_outer
     sql_on: ${lease_header.deal_id}=${deal_header.deal_id} ;;
@@ -109,6 +110,12 @@ explore: revenue {
   join: departments {
     type: left_outer
     sql_on: ${revenue.department_id} = ${departments.department_id} ;;
+    relationship: many_to_one
+  }
+
+  join: installments_and_invoices {
+    type: left_outer
+    sql_on: ${revenue.installment_id} = ${installments_and_invoices.installment_id} ;;
     relationship: many_to_one
   }
 }

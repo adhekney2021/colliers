@@ -40,6 +40,7 @@ view: revenue {
     sql: ${TABLE}.InstallmentAmtGross ;;
   }
   dimension: installment_id {
+    primary_key: yes
     type: number
     sql: ${TABLE}.InstallmentId ;;
   }
@@ -75,5 +76,6 @@ view: revenue {
   measure: tot_revenue {
     type: sum
     sql: ${revenue_contribution} ;;
+    value_format_name: usd_0
   }
 }

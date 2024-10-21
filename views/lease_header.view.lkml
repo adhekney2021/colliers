@@ -18,6 +18,7 @@ view: lease_header {
     sql: ${TABLE}.DealId2 ;;
   }
   dimension: deal_lease_id {
+    primary_key: yes
     type: number
     sql: ${TABLE}.DealLeaseId ;;
   }
@@ -136,5 +137,10 @@ view: lease_header {
   }
   measure: count {
     type: count
+  }
+  measure: tot_value {
+    type: sum
+    sql: ${total_value} ;;
+    value_format_name: usd_0
   }
 }

@@ -83,4 +83,8 @@ view: properties {
     type: count
     drill_fields: [deal_propertyid, building_name, short_name, area_type_name]
   }
+  measure: tot_area_sqm {
+    type: sum
+    sql: ${area_sq_m} ;;
+  }
 }
