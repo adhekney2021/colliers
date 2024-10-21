@@ -39,6 +39,7 @@ explore: brokers {
 explore: departments {}
 
 explore: deal_header {
+  label: "Start Deal related queries here!"
   join: broker_deal_map {
     type: left_outer
     sql_on: ${deal_header.deal_id}=${broker_deal_map.deal_id} ;;
