@@ -21,6 +21,7 @@ view: brokers {
     sql: ${TABLE}.FirstName ;;
   }
   dimension: is_active {
+    label: "Is Active or Left"
     type: number
     sql: ${TABLE}.IsActive ;;
   }
@@ -35,6 +36,11 @@ view: brokers {
   measure: count {
     type: count
     drill_fields: [detail*]
+  }
+
+  measure: broker_count {
+    type: count_distinct
+    sql: ${broker_id} ;;
   }
 
   # ----- Sets of fields for drilling ------
