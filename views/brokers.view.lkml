@@ -28,6 +28,10 @@ view: brokers {
     type: string
     sql: ${TABLE}.LastName ;;
   }
+  dimension: full_name {
+    type: string
+    sql: concat(${first_name}," ",${last_name}) ;;
+  }
   measure: count {
     type: count
     drill_fields: [detail*]
@@ -36,14 +40,14 @@ view: brokers {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	broker_id,
-	first_name,
-	last_name,
-	departments.short_name,
-	departments.department_id,
-	broker_deal_map.count,
-	revenue.count
-	]
+  broker_id,
+  first_name,
+  last_name,
+  departments.short_name,
+  departments.department_id,
+  broker_deal_map.count,
+  revenue.count
+  ]
   }
 
 }
