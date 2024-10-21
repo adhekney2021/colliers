@@ -91,4 +91,8 @@ view: deal_header {
   measure: count {
     type: count
   }
+  measure: total_deal_value {
+    type: sum
+    sql: ${total_deal_value_deal_currency} ;;
+  }
 }

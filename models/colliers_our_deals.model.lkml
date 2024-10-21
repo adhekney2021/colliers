@@ -38,7 +38,19 @@ explore: brokers {
 
 explore: departments {}
 
-explore: deal_header {}
+explore: deal_header {
+  join: broker_deal_map {
+    type: left_outer
+    sql_on: ${deal_header.deal_id}=${broker_deal_map.deal_id} ;;
+    relationship: one_to_many
+  }
+  join: brokers {
+    type: left_outer
+    sql_on: ${broker_deal_map.broker_id}=${brokers.broker_id} ;;
+    relationship: many_to_one
+  }
+
+}
 
 explore: installments_and_invoices {}
 
