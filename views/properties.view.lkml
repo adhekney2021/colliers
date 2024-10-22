@@ -79,6 +79,14 @@ view: properties {
     type: string
     sql: ${TABLE}.SuiteUnit ;;
   }
+  dimension: unique_property {
+    type: string
+    sql: concat(${building_name},", ",${address},", ",${city},", ",${postal_code},", ",${suite_unit},", ",${floor_number}) ;;
+  }
+  measure: property_count {
+    type: count_distinct
+    sql: ${unique_property} ;;
+  }
   measure: count {
     type: count
     drill_fields: [deal_propertyid, building_name, short_name, area_type_name]
