@@ -65,7 +65,7 @@ explore: lease_header {
 
   join: properties {
     type: left_outer
-    sql_on: ${lease_header.deal_property_id}=${properties.deal_propertyid} ;;
+    sql_on: ${lease_header.deal_property_id}=${properties.deal_propertyid} and ${lease_header.deal_id}=${properties.deal_id} ;;
     relationship: many_to_one
   }
 
