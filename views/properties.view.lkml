@@ -86,13 +86,17 @@ view: properties {
   measure: property_count {
     type: count_distinct
     sql: ${unique_property} ;;
+    drill_fields: [deal_propertyid, building_name, city, address, postal_code, area_type_name]
+
   }
   measure: count {
     type: count
-    drill_fields: [deal_propertyid, building_name, short_name, area_type_name]
-  }
+    drill_fields: [deal_propertyid, building_name, city, address, postal_code, area_type_name]
+    }
   measure: tot_area_sqm {
     type: sum
     sql: ${area_sq_m} ;;
+    drill_fields: [deal_propertyid, building_name, city, address, postal_code, area_type_name]
+
   }
 }
