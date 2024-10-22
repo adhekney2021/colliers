@@ -97,6 +97,7 @@ view: properties {
     type: sum
     sql: ${area_sq_m} ;;
     drill_fields: [deal_propertyid, building_name, city, address, postal_code, area_type_name]
+    value_format_name: decimal_0
 
   }
 }
