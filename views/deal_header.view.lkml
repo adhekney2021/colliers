@@ -89,6 +89,7 @@ view: deal_header {
     sql: ${TABLE}.NZDExchangeRate ;;
   }
   dimension: individual_deal_value {
+    description: "Deal Value"
     type: number
     sql: ${TABLE}.TotalDealValueDealCurrency ;;
   }
@@ -100,6 +101,7 @@ view: deal_header {
     type: count
   }
   measure: total_deal_value {
+    description: "Total Deal Value"
     type: sum
     sql: ${individual_deal_value} ;;
   }
