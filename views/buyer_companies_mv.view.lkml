@@ -1,5 +1,6 @@
 view: buyer_companies_mv {
   sql_table_name: `adityapocs.colliers_ourdeals.Buyer_Companies_MV` ;;
+  view_label: "Buyers"
 
   dimension: address_line1 {
     type: string

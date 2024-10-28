@@ -1,6 +1,5 @@
 view: companies {
   sql_table_name: `colliers_ourdeals.Companies` ;;
-  view_label: "Client/Tenant"
 
   dimension: address_line1 {
     type: string

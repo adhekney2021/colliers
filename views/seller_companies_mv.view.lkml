@@ -1,6 +1,6 @@
 view: seller_companies_mv {
   sql_table_name: `adityapocs.colliers_ourdeals.Seller_Companies_MV` ;;
-
+  view_label: "Sellers"
   dimension: address_line1 {
     type: string
     sql: ${TABLE}.AddressLine1 ;;

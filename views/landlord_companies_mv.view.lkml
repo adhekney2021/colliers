@@ -1,6 +1,6 @@
 view: landlord_companies_mv {
   sql_table_name: `adityapocs.colliers_ourdeals.Landlord_Companies_MV` ;;
-
+  view_label: "Landlords"
   dimension: address_line1 {
     type: string
     sql: ${TABLE}.AddressLine1 ;;
