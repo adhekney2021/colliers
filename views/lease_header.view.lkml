@@ -96,16 +96,19 @@ view: lease_header {
     sql: ${TABLE}.LeaseExecutionDate ;;
   }
   dimension_group: lease_expiry {
+    label: "Lease Expiry Date"
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.LeaseExpiryDate ;;
   }
   dimension_group: lease_period_ends {
+    label: "Lease Period End Date"
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.LeasePeriodEnds ;;
   }
   dimension_group: lease_period_starts {
+    label: "Lease Period Start Date"
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.LeasePeriodStarts ;;
