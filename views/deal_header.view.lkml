@@ -1,5 +1,6 @@
 view: deal_header {
   sql_table_name: `colliers_ourdeals.DealHeader` ;;
+  view_label: "Basic Deal Information"
 
   dimension: audexchange_rate {
     type: number
@@ -44,10 +45,12 @@ view: deal_header {
     sql: ${TABLE}.DealStatus ;;
   }
   dimension: deal_sub_type {
+    label: "Deal Sub Type/Deal Subcategory"
     type: string
     sql: ${TABLE}.DealSubType ;;
   }
   dimension: deal_type {
+    label: "Deal Type/Deal Category"
     type: string
     sql: ${TABLE}.DealType ;;
   }
@@ -57,22 +60,27 @@ view: deal_header {
     sql: ${TABLE}.FirmedDate ;;
   }
   dimension: is_australia {
+    label: "Australian Broker"
     type: number
     sql: ${TABLE}.IsAustralia ;;
   }
   dimension: is_canada {
+    label: "Canadian Broker"
     type: number
     sql: ${TABLE}.IsCanada ;;
   }
   dimension: is_new_zealand {
+    label: "New Zealand Broker"
     type: number
     sql: ${TABLE}.IsNewZealand ;;
   }
   dimension: is_singapore {
+    label: "Singapore Broker"
     type: number
     sql: ${TABLE}.IsSingapore ;;
   }
   dimension: is_united_states {
+    label: "US/American Broker"
     type: number
     sql: ${TABLE}.IsUnitedStates ;;
   }

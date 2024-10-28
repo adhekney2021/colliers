@@ -15,6 +15,7 @@ explore: properties {}
 explore: companies {}
 
 explore: broker_deal_map {
+  label: "Broker Deal Map, Departments"
   join: brokers {
     type: left_outer
     sql_on: ${broker_deal_map.broker_id} = ${brokers.broker_id} ;;
@@ -29,6 +30,7 @@ explore: broker_deal_map {
 }
 
 explore: brokers {
+  label:"Brokers, Departments"
   join: departments {
     type: left_outer
     sql_on: ${brokers.department_id} = ${departments.department_id} ;;
@@ -39,7 +41,7 @@ explore: brokers {
 explore: departments {}
 
 explore: deal_header {
-  label: "Start Deal related queries here!"
+  label: "Deal Header/Brokers"
   join: broker_deal_map {
     type: left_outer
     sql_on: ${deal_header.deal_id}=${broker_deal_map.deal_id} ;;
@@ -56,7 +58,7 @@ explore: deal_header {
 explore: installments_and_invoices {}
 
 explore: lease_header {
-  label: "Start Lease related queries here"
+  label: "Lease/Deal Headers, Properties, Companies, Departments, Installments, 3P Shares, Revenue and Broker"
   join: deal_header {
     type: left_outer
     sql_on: ${lease_header.deal_id}=${deal_header.deal_id} ;;
@@ -139,6 +141,7 @@ explore: lease_header {
 }
 
 explore: revenue {
+  label: "Revenue, Brokers, Departments, Installments & Invoices"
   join: brokers {
     type: left_outer
     sql_on: ${revenue.broker_id} = ${brokers.broker_id} ;;

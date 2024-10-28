@@ -1,6 +1,7 @@
 view: departments {
   sql_table_name: `colliers_ourdeals.Departments` ;;
   drill_fields: [department_id]
+  view_label: "Department/Market"
 
   dimension: department_id {
     primary_key: yes

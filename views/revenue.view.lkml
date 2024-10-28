@@ -53,6 +53,7 @@ view: revenue {
     sql: ${TABLE}.PoolAccountAmt ;;
   }
   dimension: pool_account_id {
+    hidden: yes
     type: string
     sql: ${TABLE}.PoolAccountId ;;
   }
@@ -61,6 +62,7 @@ view: revenue {
     sql: ${TABLE}.PoolDeductedfromBroker ;;
   }
   dimension: revenue_contribution {
+    description: "Broker/Department's revenue contribution to the deal"
     type: number
     sql: ${TABLE}.RevenueContribution ;;
   }
