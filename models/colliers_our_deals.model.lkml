@@ -73,6 +73,31 @@ explore: lease_header {
     type: left_outer
     sql_on: ${deal_header.deal_id}=${companies.deal_id} ;;
     relationship: many_to_many
+    sql_where: ${companies.deal_party_representation_type} is null ;;
+  }
+
+  join: landlord_companies_mv {
+    type: left_outer
+    sql_on: ${deal_header.deal_id}=${landlord_companies_mv.deal_id} ;;
+    relationship: many_to_many
+  }
+
+  join: buyer_companies_mv {
+    type: left_outer
+    sql_on: ${deal_header.deal_id}=${buyer_companies_mv.deal_id} ;;
+    relationship: many_to_many
+  }
+
+  join: seller_companies_mv {
+    type: left_outer
+    sql_on: ${deal_header.deal_id}=${seller_companies_mv.deal_id} ;;
+    relationship: many_to_many
+  }
+
+  join: tenant_companies_mv {
+    type: left_outer
+    sql_on: ${deal_header.deal_id}=${tenant_companies_mv.deal_id} ;;
+    relationship: many_to_many
   }
 
   join: departments {
