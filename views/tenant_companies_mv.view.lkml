@@ -61,4 +61,8 @@ view: tenant_companies_mv {
     type: count
     drill_fields: [tenant_name]
   }
+  measure: tenant_count {
+    type: count_distinct
+    sql: ${tenant_name} ;;
+  }
 }

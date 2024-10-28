@@ -61,4 +61,8 @@ view: seller_companies_mv {
     type: count
     drill_fields: [seller_name]
   }
+  measure: seller_count {
+    type: count_distinct
+    sql: ${seller_name} ;;
+  }
 }

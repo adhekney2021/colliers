@@ -61,4 +61,8 @@ view: landlord_companies_mv {
     type: count
     drill_fields: [landlord_name]
   }
+  measure: landlord_count {
+    type: count_distinct
+    sql: ${landlord_name} ;;
+  }
 }
