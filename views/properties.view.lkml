@@ -32,6 +32,8 @@ view: properties {
     sql: ${TABLE}.BuildingName ;;
   }
   dimension: city {
+    label: "City"
+    description: "eg. Toronto, Vancouver, Sydney, Montreal, New York City, etc."
     type: string
     sql: ${TABLE}.City ;;
   }
@@ -64,6 +66,8 @@ view: properties {
     sql: ${TABLE}.PropertySubtype ;;
   }
   dimension: property_type {
+    label: "Property Type"
+    description: "eg. Industrial, Office, Residential, Special Purpose, Land, Retail, Multi-family, Hospitality, Agribusiness"
     type: string
     sql: ${TABLE}.PropertyType ;;
   }
