@@ -76,6 +76,7 @@ view: revenue {
   }
 
   measure: tot_revenue {
+    label: "Total Revenue"
     type: sum
     sql: ${revenue_contribution} ;;
     value_format_name: usd_0
