@@ -58,6 +58,8 @@ explore: deal_header {
 explore: installments_and_invoices {}
 
 explore: lease_header {
+  symmetric_aggregates: no
+
   label: "Lease/Deal Headers, Properties, Companies, Departments, Installments, 3P Shares, Revenue and Broker"
   join: deal_header {
     type: left_outer
