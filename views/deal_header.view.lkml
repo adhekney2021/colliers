@@ -98,6 +98,8 @@ view: deal_header {
     sql: ${TABLE}.USDExchangeRate ;;
   }
   measure: count {
+    label: "Number of Transactions"
+    description: "Deal Count"
     type: count
   }
   measure: total_deal_value {
