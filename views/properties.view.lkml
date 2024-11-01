@@ -3,7 +3,7 @@ view: properties {
   drill_fields: [deal_propertyid]
 
   dimension: deal_propertyid {
-    primary_key: yes
+    primary_key: yes #verified
     type: number
     sql: ${TABLE}.DealPropertyid ;;
   }

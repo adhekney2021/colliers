@@ -18,7 +18,7 @@ view: lease_header {
     sql: ${TABLE}.DealId2 ;;
   }
   dimension: deal_lease_id {
-    primary_key: yes
+    primary_key: yes #verified
     type: number
     sql: ${TABLE}.DealLeaseId ;;
   }

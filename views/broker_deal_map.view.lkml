@@ -15,6 +15,7 @@ view: broker_deal_map {
     sql: ${TABLE}.DealId ;;
   }
   dimension: deal_party_id {
+    primary_key: yes #verified
     type: number
     sql: ${TABLE}.DealPartyId ;;
   }

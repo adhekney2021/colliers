@@ -40,7 +40,7 @@ view: revenue {
     sql: ${TABLE}.InstallmentAmtGross ;;
   }
   dimension: installment_id {
-    primary_key: yes
+    primary_key: yes #verified
     type: number
     sql: ${TABLE}.InstallmentId ;;
   }

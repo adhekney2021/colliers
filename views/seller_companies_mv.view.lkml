@@ -30,6 +30,7 @@ view: seller_companies_mv {
     sql: ${TABLE}.DealId ;;
   }
   dimension: deal_party_id {
+    primary_key: yes #verified
     type: number
     sql: ${TABLE}.DealPartyId ;;
   }

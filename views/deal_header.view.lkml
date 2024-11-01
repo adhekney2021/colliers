@@ -32,7 +32,7 @@ view: deal_header {
     sql: ${TABLE}.DealDepartment ;;
   }
   dimension: deal_id {
-    primary_key: yes
+    primary_key: yes #verified
     type: number
     sql: ${TABLE}.DealId ;;
   }

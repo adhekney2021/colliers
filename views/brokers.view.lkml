@@ -3,7 +3,7 @@ view: brokers {
   drill_fields: [broker_id]
 
   dimension: broker_id {
-    primary_key: yes
+    primary_key: yes #verified
     type: number
     sql: ${TABLE}.BrokerId ;;
   }
