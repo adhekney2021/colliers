@@ -1,6 +1,8 @@
 view: properties {
   sql_table_name: `colliers_ourdeals.Properties` ;;
   drill_fields: [deal_propertyid]
+  view_label: "Property Details.  Eg. City, address, area, building name, property type, square footage, etc."
+
 
   dimension: deal_propertyid {
     primary_key: yes #verified
