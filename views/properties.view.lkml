@@ -34,7 +34,7 @@ view: properties {
   }
   dimension: city {
     label: "City"
-    description: "Property City"
+    description: "Property City.  eg. Calgary, Toronto, Sydney, Portland, Vancouver, Virginia Beach, Melbourne, Norfolk, Saskatoon, Richmond, Victoria, Tampa, Burnaby, Mississauga, Chicago, Surrey, Edmonton, Chesapeake, New York, Phoenix, Provo, Sacremento, Indianapolis, Markham, Lake Oswego"
     type: string
     sql: ${TABLE}.City ;;
   }
