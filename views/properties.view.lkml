@@ -72,12 +72,14 @@ view: properties {
     type: string
     sql: ${TABLE}.PropertyType ;;
   }
-  dimension: short_name {
+  dimension: State_Prov_Abbreviation {
+    description: "State or Province"
     type: string
     sql: ${TABLE}.ShortName ;;
   }
-  dimension: short_name2 {
+  dimension: Country_Abbreviation {
     type: string
+    description: "Country Abbreviation.  Eg. USA = United States of America, CAN = Canada, AUS = Australia"
     sql: ${TABLE}.ShortName2 ;;
   }
   dimension: suite_unit {
