@@ -141,6 +141,11 @@ view: lease_header {
   measure: count {
     type: count
   }
+
+  measure: deal_count {
+    type: count_distinct
+    sql: ${deal_lease_id} ;;
+  }
   measure: tot_value {
     type: sum
     sql: ${total_value} ;;
